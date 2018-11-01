@@ -231,13 +231,29 @@ nav a:hover {
   display: flex;
   justify-content: center;
   min-width: calc(100% - 60px);
-  height: 280px;
-  margin: 2em;
+  height: 260px;
+  width: 260px;
+  margin: 4em auto;
   padding: 0;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
+}
+
+.third-content p {
+    position: relative;
+    width: 100%;
+    top: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-content a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 .student {
