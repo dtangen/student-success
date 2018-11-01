@@ -178,11 +178,28 @@ nav a:hover {
 /* ----- Sidebar----- */
 .sidebar {
   grid-area: sidebar;
-  grid-column: 1 / span 1;
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  font-size: 1.5em;
 }
 
 .sidebar ul {
   list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0 auto;
+  padding: 0;
+  border-top: solid var(--main-grey) 1px;
+  height: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li:first-child {
+  border-top: none;
 }
 
 .sidebar ul li a {
@@ -201,7 +218,7 @@ nav a:hover {
 }
 
 .main-header {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ----- Secondary----- */
@@ -241,19 +258,23 @@ nav a:hover {
   background-size: 100% 100%;
 }
 
+.third-content:first-child {
+    margin-top: 0;
+}
+
 .third-content p {
-    position: relative;
-    width: 100%;
-    top: 224px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  top: 224px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .third-content a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 .student {
@@ -301,13 +322,15 @@ nav a:hover {
 }
 
 .footer a {
-    color: white;
-    text-align: center;
-    margin: 2em auto;
+  color: white;
+  text-align: center;
+  margin: 2em auto;
 }
 
 .donate {
   background-color: var(--main-green);
+  text-decoration: none;
+  font-weight: bold;
   color: white;
   padding: 1em 2em;
   width: 280px;
