@@ -1,0 +1,386 @@
+/* ---------- General---------- */
+:root {
+  --main-grey: #7d8075;
+  --main-green: #7eba55;
+  --main-blue: #1b81be;
+  --main-gold: #fabe42;
+  --main-red: #d6463f;
+  --main-purple: #855f9f;
+  --footer-grey: #343531;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.content {
+  height: 200vh;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-row-gap: 0;
+  grid-template-areas:
+    "logo nav"
+    "banner banner"
+    "main main"
+    "second second"
+    "sidebar sidebar"
+    "third third"
+    "footer footer";
+}
+/* ---------- Home Page ---------- */
+
+/* ----- Navbar ----- */
+header {
+  background: white;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  border-top: solid #1b81be 0.5em;
+  margin-bottom: 0;
+}
+
+.header-logo {
+  grid-area: logo;
+  height: 80px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  grid-area: nav;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 0.25em;
+}
+
+nav a {
+  color: var(--main-grey);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 60px);
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: var(--main-grey);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav a:hover {
+  color: var(--main-green);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 50ms ease-in-out 250ms;
+}
+
+/* ----- Banner----- */
+.banner {
+  grid-area: banner;
+  background: url(../img/banner.jpg) no-repeat center center;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  height: 20vh;
+}
+
+/* ----- Sidebar----- */
+.sidebar {
+  grid-area: sidebar;
+  grid-column: 1 / span 1;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: var(--main-blue);
+}
+
+/* ----- Main----- */
+.main {
+  grid-area: main;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.main-header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ----- Secondary----- */
+.second {
+  grid-area: second;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.secondary-header {
+  color: var(--main-blue);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+}
+
+/* ----- Third----- */
+.third {
+  grid-area: third;
+  color: white;
+}
+
+.third-content {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  min-width: calc(100% - 60px);
+  height: 280px;
+  margin: 2em;
+  padding: 0;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.student {
+  background: url(../img/student.jpg);
+}
+
+.student-info {
+  background-color: var(--main-gold);
+  height: 20%;
+}
+
+.campus {
+  background-image: url(../img/campus.jpg);
+}
+
+.campus-info {
+  background-color: var(--main-red);
+  height: 20%;
+}
+
+.stories {
+  background-image: url(../img/stories.jpg);
+}
+
+.stories-info {
+  background-color: var(--main-purple);
+  height: 20%;
+}
+
+/* ----- Footer---- */
+.footer {
+  grid-area: footer;
+  background-color: var(--footer-grey);
+  color: white;
+}
+
+.footer-logo {
+  width: 80px;
+}
+
+.donate {
+  background-color: var(--main-green);
+  color: white;
+}
+
+.thanks {
+  background-color: black;
+  color: white;
+}
+
+/* -------------------- Tablet Screen -------------------- */
+@media screen and (min-width: 768px) {
+  /* ---------- General---------- */
+  .content {
+    grid-template-rows: auto 1fr 1fr auto auto auto 1fr;
+    grid-row-gap: 0;
+    grid-template-areas:
+      "logo logo logo"
+      "nav nav nav"
+      "banner banner banner"
+      "sidebar main main"
+      "sidebar second second"
+      "third third third"
+      "footer footer footer";
+  }
+
+  /* ----- Navbar ----- */
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr minmax(500px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / span 1;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--main-green);
+    position: absolute;
+    bottom: -1.7em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  .dropdown-content {
+    position: absolute;
+  }
+}
+
+/* -------------------- Desktop Screen -------------------- */
+@media screen and (min-width: 1170px) {
+  /* ---------- General---------- */
+  .content {
+    grid-template-rows: auto 1fr auto auto auto auto 1fr;
+    grid-template-areas:
+      "logo logo nav"
+      "banner banner banner"
+      "sidebar main main"
+      "sidebar second second"
+      "third third third"
+      "footer footer footer";
+  }
+
+  .banner {
+    grid-area: banner;
+    margin: 0;
+    padding: 0;
+    height: 30vh;
+  }
+}
