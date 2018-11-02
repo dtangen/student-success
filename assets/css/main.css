@@ -23,7 +23,7 @@ body {
 .content {
   height: 200vh;
   display: grid;
-  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-rows: 7em 7em auto auto auto auto auto;
   grid-row-gap: 0;
   grid-template-areas:
     "logo nav"
@@ -164,7 +164,7 @@ nav a:hover {
 /* ----- Banner----- */
 .banner {
   grid-area: banner;
-  background: url(../img/banner.jpg) no-repeat center center;
+  background: url(../img/banner-main.jpg) no-repeat center center;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
@@ -172,7 +172,7 @@ nav a:hover {
   min-width: 320px;
   margin: 0;
   padding: 0;
-  height: 20vh;
+  /* height: 20vh; */
 }
 
 /* ----- Sidebar----- */
@@ -182,6 +182,7 @@ nav a:hover {
   padding: 0 1em;
   width: 100%;
   font-size: 1.5em;
+  background: #f1f1f1;
 }
 
 .sidebar ul {
@@ -259,7 +260,7 @@ nav a:hover {
 }
 
 .third-content:first-child {
-    margin-top: 0;
+    margin-top: 1em;
 }
 
 .third-content p {
@@ -363,7 +364,7 @@ nav a:hover {
 @media screen and (min-width: 768px) {
   /* ---------- General---------- */
   .content {
-    grid-template-rows: auto 1fr 1fr auto auto auto 1fr;
+    grid-template-rows: auto auto 1fr auto auto auto 1fr;
     grid-row-gap: 0;
     grid-template-areas:
       "logo logo logo"
@@ -438,7 +439,7 @@ nav a:hover {
 @media screen and (min-width: 1170px) {
   /* ---------- General---------- */
   .content {
-    grid-template-rows: auto 1fr auto auto auto auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto 1fr;
     grid-template-areas:
       "logo logo nav"
       "banner banner banner"
