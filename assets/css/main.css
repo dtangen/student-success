@@ -633,6 +633,12 @@ nav a:hover {
     height: 40vh;
   }
 
+   /* ----- Sidebar ---- */
+    .sidebar {
+      font-size: 1.25em;
+    }
+
+   /* ----- Third ---- */
   .third-content {
     width: 360px;
     height: 290px;
@@ -646,19 +652,15 @@ nav a:hover {
   /* ----- Footer--- */
   .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "footer-logo footer-address donate";
     height: 12em;
   }
 
   .logo-link {
     grid-area: footer-logo;
-    align-self: right;
-    text-align: right;
-  }
+    margin-left: 4em;
 
-  .footer-logo {
-    text-align: right;
   }
 
   .address {
@@ -667,10 +669,12 @@ nav a:hover {
     align-self: center;
     position: absolute;
     bottom: 75px;
+    margin-left: 1em;
   }
 
   .donate {
     grid-area: donate;
     align-self: top;
+    margin-right: 10em;
   }
 }
