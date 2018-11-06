@@ -469,6 +469,7 @@ nav a:hover {
   /* ----- Banner----- */
   .banner {
     height: 20vh;
+    margin-top: 40px;
   }
 
   /* ----- Sidebar----- */
@@ -585,6 +586,7 @@ nav a:hover {
   .logo {
     all: unset;
     grid-column: 2 / span 1;
+    margin-left: 5em;
   }
 
   nav {
@@ -623,14 +625,16 @@ nav a:hover {
     top: 86px;
     left: 48px;
     width: 250px;
+    font-size: .75em;
   }
 
   /* ----- Banner---- */
   .banner {
     grid-area: banner;
     margin: 0;
+    margin-top: 86px;
     padding: 0;
-    height: 40vh;
+    height: 30vh;
   }
 
    /* ----- Sidebar ---- */
