@@ -371,8 +371,6 @@ nav a:hover {
 @media screen and (min-width: 768px) {
   /* ---------- General---------- */
   .content {
-    /* grid-template-rows: 5em 4em 8em 20em 20em auto auto; */
-    /* grid-template-rows: auto auto auto auto auto auto 35vh; */
     grid-row-gap: 0;
     grid-template-areas:
       "logo logo logo"
@@ -446,9 +444,8 @@ nav a:hover {
   .dropdown-content {
     position: absolute;
     top: 43px;
-    left: 33px;
+    left: 32px;
     width: 200px;
-    transition-duration: 0.5s;
   }
 
   .dropdown-content li {
@@ -571,19 +568,52 @@ nav a:hover {
       "sidebar second second"
       "third third third"
       "footer footer footer";
+      /* grid-template-rows: none;
+      grid-template-areas: none; */
+  }
+
+  /* ----- Navbar ----- */
+  .nav-toggle-label {
+    all: unset;
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(500px, 3fr) 1fr;
   }
 
   .logo {
-    grid-area: logo;
-    grid-column: 1 / span 1;
+    all: unset;
+    grid-column: 2 / span 1;
   }
 
   nav {
     all: unset;
-    grid-area: nav;
+    grid-column: 3 / span 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  .dropdown {
+    padding: 0;
   }
 
   /* ----- Banner---- */
@@ -594,7 +624,34 @@ nav a:hover {
     height: 30vh;
   }
 
-  /* ----- Banner---- */
-  .footer {
+  .third-content {
+    width: 380px;
+    height: 300px;
   }
+
+  .third-content p {
+    top: 236px;
+    opacity: .8;
+  }
+
+  /* ----- Footer--- */
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "footer-logo footer-address donate"
+  }
+
+  .logo-link {
+    grid-area: footer-logo;
+  }
+
+  .address {
+    grid-area: footer-address;
+  }
+
+  .donate {
+    grid-area: donate;
+  }
+
 }
