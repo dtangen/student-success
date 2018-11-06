@@ -568,7 +568,7 @@ nav a:hover {
       "sidebar second second"
       "third third third"
       "footer footer footer";
-      /* grid-template-rows: none;
+    /* grid-template-rows: none;
       grid-template-areas: none; */
   }
 
@@ -612,8 +612,18 @@ nav a:hover {
     position: relative;
   }
 
+  nav a::before {
+    bottom: -1.7em;
+  }
+
   .dropdown {
-    padding: 0;
+    padding: 2em 0;
+  }
+
+  .dropdown-content {
+    top: 86px;
+    left: 48px;
+    width: 250px;
   }
 
   /* ----- Banner---- */
@@ -621,37 +631,47 @@ nav a:hover {
     grid-area: banner;
     margin: 0;
     padding: 0;
-    height: 30vh;
+    height: 40vh;
   }
 
   .third-content {
-    width: 380px;
-    height: 300px;
+    width: 360px;
+    height: 290px;
   }
 
   .third-content p {
-    top: 236px;
-    opacity: .8;
+    top: 226px;
+    opacity: 0.8;
   }
 
   /* ----- Footer--- */
   .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "footer-logo footer-address donate"
+    grid-template-areas: "footer-logo footer-address donate";
+    height: 12em;
   }
 
   .logo-link {
     grid-area: footer-logo;
+    align-self: right;
+    text-align: right;
+  }
+
+  .footer-logo {
+    text-align: right;
   }
 
   .address {
     grid-area: footer-address;
+    width: 70%;
+    align-self: center;
+    position: absolute;
+    bottom: 75px;
   }
 
   .donate {
     grid-area: donate;
+    align-self: top;
   }
-
 }
