@@ -440,22 +440,26 @@ nav a:hover {
     padding-bottom: 2em;
   }
 
+  .dropdown:hover a:not(.dropdown-link) {
+    color: var(--main-green)
+  }
+
+  .dropdown:hover a::before {
+    transform: scale(1, 1);
+  }
+
   .dropdown-content {
     position: absolute;
     top: 43px;
     left: 32px;
-    width: 200px;
+    width: 250px;
   }
 
   .dropdown-content li {
     margin: 0 auto;
-    height: 3em;
+    height: 2.5em;
     display: flex;
     align-items: center;
-  }
-
-  .dropdown-content li a:hover {
-    color: white;
   }
 
   .dropdown-content li a {
@@ -484,8 +488,6 @@ nav a:hover {
   .main-header {
     font-size: 2.5em;
   }
-
-  /* ----- Secondary ----- */
 
   /* ----- Third ---- */
   .third {
@@ -625,7 +627,7 @@ nav a:hover {
     top: 86px;
     left: 48px;
     width: 250px;
-    font-size: .75em;
+    font-size: 0.75em;
   }
 
   /* ----- Banner---- */
@@ -637,12 +639,12 @@ nav a:hover {
     height: 30vh;
   }
 
-   /* ----- Sidebar ---- */
-    .sidebar {
-      font-size: 1.25em;
-    }
+  /* ----- Sidebar ---- */
+  .sidebar {
+    font-size: 1.25em;
+  }
 
-   /* ----- Third ---- */
+  /* ----- Third ---- */
   .third-content {
     width: 360px;
     height: 290px;
@@ -664,7 +666,6 @@ nav a:hover {
   .logo-link {
     grid-area: footer-logo;
     margin-left: 4em;
-
   }
 
   .address {
