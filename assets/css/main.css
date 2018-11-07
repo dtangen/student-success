@@ -174,7 +174,7 @@ nav a:hover {
   background-size: 100% 100%;
   margin: 0;
   padding: 0;
-  height: 15vh;
+  height: 10vh;
 }
 
 /* ----- Sidebar----- */
@@ -259,9 +259,9 @@ nav a:hover {
   height: 10vh;
   display: flex;
   justify-content: center;
-  min-width: calc(100% - 60px);
-  height: 260px;
-  width: 260px;
+  height: 220px;
+  min-width: 260px;
+  max-width: calc(100% - 200px);
   margin: 4em auto;
   padding: 0;
   -webkit-background-size: 100% 100%;
@@ -277,7 +277,7 @@ nav a:hover {
 .third-content p {
   position: relative;
   width: 100%;
-  top: 224px;
+  top: 204px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,6 +476,7 @@ nav a:hover {
 
   .dropdown-content li a {
     font-size: .85em;
+    text-transform: capitalize;
   }
 
   .dropdown-content li a::before {
@@ -505,6 +506,11 @@ nav a:hover {
     font-size: 2.5em;
   }
 
+/* ----- Second ---- */ 
+.secondary-header {
+  font-size: 1.5em;
+}
+
   /* ----- Third ---- */
   .third {
     text-align: center;
@@ -530,43 +536,6 @@ nav a:hover {
   }
 
   /* ----- Footer---- */
-  /* .footer {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 250px;
-  }
-
-  .logo-link {
-    align-self: left;
-    text-align: right;
-    width: 37%;
-    margin-top: 1.5em;
-  }
-
-  .footer-logo {
-    margin-left: 10%;
-  }
-
-  .address {
-    width: 63%;
-    text-align: left;
-    align-self: right;
-    margin-top: 1.5em;
-  }
-
-  .donate {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    position: absolute;
-    bottom: 85px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  } */
-
   .footer {
     display: grid;
     grid-template-columns: minmax(50px, auto) 30% 50% minmax(50px, auto);
@@ -581,6 +550,7 @@ nav a:hover {
     grid-area: logo;
     grid-column: 2 / span 1;
     margin-top: 10px;
+    margin-right: 15px;
   }
 
   .footer-logo {
@@ -624,8 +594,6 @@ nav a:hover {
       "sidebar second second"
       "third third third"
       "footer footer footer";
-    /* grid-template-rows: none;
-      grid-template-areas: none; */
   }
 
   /* ----- Navbar ----- */
@@ -752,27 +720,31 @@ nav a:hover {
   .footer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "footer-logo footer-address donate";
-    height: 12em;
+    grid-template-areas: 
+    "logo address donate";
+    height: 10em;
   }
 
   .logo-link {
-    grid-area: footer-logo;
-    margin-left: 4em;
+    grid-area: logo;
+    align-self: center;
+    margin-left: 6em;
+    margin-bottom: 3em;
   }
 
   .address {
-    grid-area: footer-address;
+    grid-area: address;
     width: 70%;
     align-self: center;
-    position: absolute;
-    bottom: 75px;
     margin-left: 1em;
+    margin-bottom: 3em;
   }
 
   .donate {
     grid-area: donate;
-    margin-right: 10em;
-    bottom: 95px;
+    align-self: center;
+    margin-right: 5em;
+    margin-bottom: 3em;
+    margin-top: 0;
   }
 }
