@@ -18,6 +18,7 @@
 body {
   margin: 0;
   height: 100%;
+  background-color: white;
 }
 
 .content {
@@ -135,7 +136,7 @@ nav a {
 
 .dropdown-content {
   display: none;
-  position: relative;
+  position: absolute;
   background-color: var(--main-grey);
   min-width: 160px;
   padding: 12px 16px;
@@ -371,7 +372,7 @@ nav a:hover {
   justify-content: center;
   align-content: center;
   font-style: italic;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
 
@@ -434,7 +435,7 @@ nav a:hover {
     height: 5px;
     background: var(--main-green);
     position: absolute;
-    bottom: -1.2em;
+    bottom: -20px;
     left: 0;
     right: 0;
     transform: scale(0, 1);
@@ -450,7 +451,7 @@ nav a:hover {
   }
 
   .dropdown:hover a:not(.dropdown-link) {
-    color: var(--main-green)
+    color: var(--main-green);
   }
 
   .dropdown:hover a::before {
@@ -508,7 +509,7 @@ nav a:hover {
   }
 
   .third-content {
-    min-width: 200px;
+    min-width: 31%;
     width: 240px;
     margin: 0 auto !important;
     display: inline-block;
@@ -625,7 +626,7 @@ nav a:hover {
   }
 
   nav a::before {
-    bottom: -1.7em;
+    bottom: -32px;
   }
 
   .dropdown {
@@ -633,7 +634,7 @@ nav a:hover {
   }
 
   .dropdown-content {
-    top: 86px;
+    top: 87px;
     left: 48px;
     width: 250px;
     font-size: 0.75em;
@@ -650,18 +651,40 @@ nav a:hover {
 
   /* ----- Sidebar ---- */
   .sidebar {
-    font-size: 1.25em;
+    font-size: 1em;
+  }
+
+  /* ----- Main ---- */
+  .main {
+    width: 800;
+  }
+
+  /* ----- Second---- */
+  .second {
+    width: 800;
   }
 
   /* ----- Third ---- */
   .third-content {
-    width: 360px;
+    width: 330px;
     height: 290px;
   }
 
   .third-content p {
     top: 226px;
     opacity: 0.8;
+  }
+
+  .student {
+    margin-right: 0 !important;
+  }
+
+  .campus {
+    margin: 0 1em !important;
+  }
+
+  .stories {
+    margin-left: 0 !important;
   }
 
   /* ----- Footer--- */
